@@ -161,16 +161,79 @@ void updBuzzScheduler(bool state, long dist) {
 	buzzOffMs = (uint16_t)mapped;
 }
 
-
+// ------ Setup -------
 void setup() {
-  // put your setup code here, to run once:
 	
+	pinMode(greenPin, OUTPUT);
+	pinMode(yellowPin, OUTPUT);
+	pinMode(redPin, OUTPUT);
+	pinMode(sigB, OUTPUT);
+	pinMode(trig, OUTPUT);
+	pinMode(echo, INPUT);
 
+	Serial.begin(BAUD_RATE);
 
+	scanner.attach(sigS);
+	scanner.write(angleCur);
+
+	lcd.init();
+	lcd.backlight();
+	lcd.clear();
+	lcdSetEmpty();
+
+	setIdleIndicators();
+
+	uint32_t tNow = millis();
+	tServoNext = tNow + servoMs;
+	tBuzzNext = now;
 
 }
 
-void loop() {
-  // put your main code here, to run repeatedly:
+// ------ Loop -------
 
+void loop() {
+  unit32_t now = millis();
+
+  //Servo & Distance
+	if ((int32_t)(now - tServoNext) >= 0) {
+		tServoNext = now + servoMs;
+
+		//Move Servo
+		angleCur += dir * stepAngle;
+		if (angleCur >= maxAngle) { angleCur = maxAngle; dir = -1; }
+		else if (angleCur <= minAngle) { angleCur = minAngle; dir = +1; }
+		scanner.write(angleCur);
+
+		// Distance
+		long d = measureDistanceCM();
+		lastDistCM = d;
+
+		// Alert state
+		AlertNow = computeStableAlert(d);
+		if (alertNow) setAlertIndicators();
+		else setIdleIndicators();
+
+		updLCD(alertNow);
+		updBuzzScheduler(alertNow, d);
+		sendData(angleCur, d);
+}
+
+// Buzzer Update 
+	if (alertNow) {
+		if ((int32_t)(now - tBuzzNext) >= 0) {
+			if (buzzOn) {
+				digitalWrite(sigB, HIGH);
+				buzzOn = true;
+				tBuzzNext = now + buzzOnMs;
+			}
+			else {
+				digitalWrite(sigB, LOW);
+				buzzOn = false;
+				tBuzzNext = now + buzzOffMs;
+			}
+		}
+	} else {	
+		digitalWrite(sigB, LOW);
+		buzzOn = false;
+	}
 }

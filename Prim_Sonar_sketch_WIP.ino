@@ -1,15 +1,13 @@
 //Arduino Code Prim
 
-// Order of to do:
-// - Pin Assignment
-// - Libraries 
-// - Configs
-// - 
+// Needs to be stress tested and debugged.
 
 //-------------- Libraries -------------------
 #include <Servo.h>
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
+
+//Ignore error in Visual studio code, the libraries are fround in Arduino IDE.
 
 
 //-------------- Pin Assignment ----------------

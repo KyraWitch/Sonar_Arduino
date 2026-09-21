@@ -10,6 +10,9 @@
 //Ignore error in Visual studio code, the libraries are fround in Arduino IDE.
 
 
+//Rememeber to add bluetooth connectivity.
+
+
 //-------------- Pin Assignment ----------------
   //Colour pins
   const int greenPin = 5; // Green 

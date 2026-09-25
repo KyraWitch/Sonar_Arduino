@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "hsB0LCp7B28=",
+  "dgSpecHash": "kEZ2qo8du24=",
   "success": true,
-  "projectFilePath": "/home/Kyra/Reposotories/Sonar_Arduino/Backend/SonarBackend.csproj",
+  "projectFilePath": "/var/home/Kyra/Repositories/Sonar_Arduino/Backend/SonarBackend.csproj",
   "expectedPackageFiles": [
-    "/home/Kyra/.nuget/packages/microsoft.netcore.app.ref/8.0.29/microsoft.netcore.app.ref.8.0.29.nupkg.sha512",
-    "/home/Kyra/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.29/microsoft.aspnetcore.app.ref.8.0.29.nupkg.sha512",
-    "/home/Kyra/.nuget/packages/microsoft.netcore.app.host.linux-x64/8.0.29/microsoft.netcore.app.host.linux-x64.8.0.29.nupkg.sha512"
+    "/home/Kyra/.nuget/packages/microsoft.netcore.app.ref/8.0.30/microsoft.netcore.app.ref.8.0.30.nupkg.sha512",
+    "/home/Kyra/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.30/microsoft.aspnetcore.app.ref.8.0.30.nupkg.sha512",
+    "/home/Kyra/.nuget/packages/microsoft.netcore.app.host.linux-x64/8.0.30/microsoft.netcore.app.host.linux-x64.8.0.30.nupkg.sha512"
   ],
   "logs": []
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/Kyra/Reposotories/Sonar_Arduino/Backend/SonarBackend.csproj": {}
+    "/var/home/Kyra/Repositories/Sonar_Arduino/Backend/SonarBackend.csproj": {}
   },
   "projects": {
-    "/home/Kyra/Reposotories/Sonar_Arduino/Backend/SonarBackend.csproj": {
+    "/var/home/Kyra/Repositories/Sonar_Arduino/Backend/SonarBackend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/Kyra/Reposotories/Sonar_Arduino/Backend/SonarBackend.csproj",
+        "projectUniqueName": "/var/home/Kyra/Repositories/Sonar_Arduino/Backend/SonarBackend.csproj",
         "projectName": "SonarBackend",
-        "projectPath": "/home/Kyra/Reposotories/Sonar_Arduino/Backend/SonarBackend.csproj",
+        "projectPath": "/var/home/Kyra/Repositories/Sonar_Arduino/Backend/SonarBackend.csproj",
         "packagesPath": "/home/Kyra/.nuget/packages/",
-        "outputPath": "/home/Kyra/Reposotories/Sonar_Arduino/Backend/obj/",
+        "outputPath": "/var/home/Kyra/Repositories/Sonar_Arduino/Backend/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/Kyra/.nuget/NuGet/NuGet.Config"
@@ -20,7 +20,7 @@
           "net8.0"
         ],
         "sources": {
-          "/var/home/linuxbrew/.linuxbrew/Cellar/dotnet/10.0.302/libexec/library-packs": {},
+          "/var/home/linuxbrew/.linuxbrew/Cellar/dotnet/10.0.400/libexec/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -40,7 +40,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.300"
+        "SdkAnalysisLevel": "10.0.400"
       },
       "frameworks": {
         "net8.0": {
@@ -60,15 +60,15 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.29, 8.0.29]"
+              "version": "[8.0.30, 8.0.30]"
             },
             {
               "name": "Microsoft.NETCore.App.Host.linux-x64",
-              "version": "[8.0.29, 8.0.29]"
+              "version": "[8.0.30, 8.0.30]"
             },
             {
               "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.29, 8.0.29]"
+              "version": "[8.0.30, 8.0.30]"
             }
           ],
           "frameworkReferences": {
@@ -76,7 +76,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/var/home/linuxbrew/.linuxbrew/Cellar/dotnet/10.0.302/libexec/sdk/10.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/var/home/linuxbrew/.linuxbrew/Cellar/dotnet/10.0.400/libexec/sdk/10.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

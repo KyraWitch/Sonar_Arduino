@@ -7,6 +7,7 @@
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
 
+
 //Ignore error in Visual studio code, the libraries are fround in Arduino IDE.
 
 
@@ -88,10 +89,17 @@ long measureDistanceCM() {
 
 // Send Data to Serial
 void sendData(int angle, long dist) {
+	// Wire
 	Serial.print(angle);
 	Serial.print(",");
 	Serial.print(dist);
 	Serial.print(".");
+
+	// Bluetooth
+    Serial1.print(angle);
+    Serial1.print(",");
+    Serial1.print(dist);
+    Serial1.print(".");
 }
 
 // LED State
@@ -172,7 +180,8 @@ void setup() {
 	pinMode(trig, OUTPUT);
 	pinMode(echo, INPUT);
 
-	Serial.begin(BAUD_RATE);
+	Serial.begin(BAUD_RATE); // Wire
+	Serial1.begin(BAUD_RATE); // Bluetooth
 
 	scanner.attach(sigS);
 	scanner.write(angleCur);

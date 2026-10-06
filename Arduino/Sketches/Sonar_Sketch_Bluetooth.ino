@@ -11,9 +11,6 @@
 //Ignore error in Visual studio code, the libraries are fround in Arduino IDE.
 
 
-//Rememeber to add bluetooth connectivity.
-
-
 //-------------- Pin Assignment ----------------
   //Colour pins
   const int greenPin = 5; // Green 
@@ -59,7 +56,7 @@ int anglecCur = minAngle;
 int dir = +1;
 
 bool alertNow = false;
-bool lastAlert = false:
+bool lastAlert = false;
 
 uint23_t tServoNext = 0;
 
@@ -119,7 +116,7 @@ void lcdSetEmpty() {
 	lcd.setCursor(1, 0);
 	lcd.print("We good");
 	lcd.setCursor(0, 1);
-	lcd.print("          ")
+	lcd.print("          ");
 }
 
 void lcdSetWarning() {
